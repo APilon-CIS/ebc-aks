@@ -1,0 +1,22 @@
+---
+# L'API Kubernetes est en constante évolution. L'objet déployement n'utilise pas 
+# l'API 'v1' comme les pods et namespaces. Trouvez sur la documentation quelle version utiliser :
+# https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/deployment-v1/
+apiVersion: # Alors ? Quelle version utiliser ?
+kind: # Quel type de ressource ?
+metadata:
+  name: # Quel nom pour notre déployment ?
+  namespace: # Quel namespace ?
+spec:
+  selector:
+    matchLabels:
+      # Spécifier quels labels utiliser au format key: value
+  replicas: # Combien de pods wordpress veut-on ?
+  template: # Ici, on définie un template de pod, y compris 
+    metadata:
+      labels:
+        # Spécifier les labels a appliquer a notre pod
+    spec:
+      containers: # Ce champs contient la liste des containers à déployer
+      - name: # Quel nom donner à notre container
+        image: # Quell image utilise notre container ?
