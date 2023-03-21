@@ -1,0 +1,20 @@
+---
+apiVersion: ########
+kind: ########
+metadata:
+  name: ########
+  namespace: ########
+  annotations:
+    kubernetes.io/ingress.class: azure/application-gateway # Indique quel ingress controller utiliser
+    appgw.ingress.kubernetes.io/backend-path-prefix: "/"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: #####
+        backend:
+          service:
+            name: ########
+            port:
+              number: ########
+        pathType: ########
