@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: # Quel type de ressource souhaite-t-on déployer ?
+metadata:
+  name: # Quel est le nom de notre pod ?
+  namespace: # Dans quel namespace déployer notre pod ?
+spec:
+  containers: # Ce champs contient la liste des containers à déployer
+  - name: # Quel nom donner à notre container
+    image: # Quell image utilise notre container ?
