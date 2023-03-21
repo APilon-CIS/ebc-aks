@@ -28,7 +28,7 @@ Vous pouvez également utiliser la documentation spécifique à l'ingress contro
 
 Quelques indices :
 * Contrairement aux services, qui pointent vers des Pods, les Ingress ciblent des Services
-* On souhaite que tous les trafique '/' soit redirigé vers Wordpress
+* On souhaite que tous les trafique '/\<votre-nom\>' soit redirigé vers votre service Wordpress
 
 ## 2. Vérification
 
