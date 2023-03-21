@@ -1,0 +1,19 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: wordpress
+  namespace: apilon-namespace
+  annotations:
+    kubernetes.io/ingress.class: azure/application-gateway # Indique quel ingress controller utiliser
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          service:
+            name: wordpress
+            port:
+              number: 80
+        pathType: Prefix

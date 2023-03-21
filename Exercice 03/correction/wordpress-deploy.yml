@@ -1,0 +1,19 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress
+  namespace: apilon-namespace
+spec:
+  selector:
+    matchLabels:
+      app: wordpress # Attention à bien avoir les mêmes dans la template de pod
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: wordpress
+    spec:
+      containers:
+      - name: wordpress
+        image: wordpress

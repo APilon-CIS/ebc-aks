@@ -1,0 +1,21 @@
+---
+apiVersion: ##########
+kind: ##########
+metadata:
+  name: ##########
+  namespace: ##########
+spec:
+  selector:
+    matchLabels:
+      ##########
+  template:
+    metadata:
+      labels:
+        ##########
+    spec:
+      containers:
+      - name: ##########
+        image: ##########
+        env: # Quelles valeurs sont necessaires pour faire fonctionner mysql ? Réponse ici : https://hub.docker.com/_/mysql
+        - name: ##########
+          value: ##########

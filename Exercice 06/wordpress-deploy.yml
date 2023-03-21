@@ -1,0 +1,21 @@
+---
+apiVersion: ##########
+kind: ##########
+metadata:
+  name: ##########
+  namespace: ##########
+spec:
+  selector:
+    matchLabels:
+      ##########
+  template:
+    metadata:
+      labels:
+        ##########
+    spec:
+      containers:
+      - name: ##########
+        image: ##########
+        env: # Quelles variables sont nécessaires pour se connecter à la BDD ? https://hub.docker.com/_/wordpress
+        - name: ##########
+          value: ##########
