@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress
+  namespace: apilon-namespace
+spec:
+  selector:
+    matchLabels:
+      app: wordpress # Attention à bien avoir les mêmes dans la template de pod
+  template:
+    metadata:
+      labels:
+        app: wordpress
+    spec:
+      containers:
+      - name: wordpress
+        image: wordpress
+        env:
+        - name: WORDPRESS_CONFIG_EXTRA
+          value: |
+            define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/antoine/');
+            define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/antoine/');
+            define('WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/antoine/wp-content/');
