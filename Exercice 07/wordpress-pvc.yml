@@ -1,0 +1,12 @@
+apiVersion: #####
+kind: #####
+metadata:
+  name: #####
+  namespace: #####
+spec:
+  accessModes:
+  - #####
+  resources:
+    requests:
+      storage: #####
+  storageClassName: #####

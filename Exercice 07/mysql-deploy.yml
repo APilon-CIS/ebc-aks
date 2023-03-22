@@ -1,0 +1,29 @@
+---
+# Reprenez votre déploiement créé précédemment, et ajoutez uniquement la partie
+# concernant les volumes
+apiVersion: #####
+kind: #####
+metadata:
+  #####
+spec:
+  selector:
+    matchLabels:
+      #####
+  template:
+    metadata:
+      labels:
+        #####
+    spec:
+      containers:
+      - name: #####
+        image: #####
+        env:
+        #####
+        volumeMounts:
+        - name: #####
+          mountPath: #####
+      volumes:
+      - name: #####
+        persistentVolumeClaim:
+          claimName: #####
+    
