@@ -1,0 +1,19 @@
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: wordpress
+  namespace: apilon-namespace
+spec:
+  maxReplicas: 5
+  scaleTargetRef:
+    kind: Deployment
+    name: wordpress
+    apiVersion: apps/v1
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50
