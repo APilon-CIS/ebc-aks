@@ -1,0 +1,19 @@
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: #####
+  namespace: #####
+spec:
+  maxReplicas: #####
+  scaleTargetRef:
+    kind: #####
+    name: #####
+    apiVersion: #####
+  metrics:
+  - type: #####
+    resource:
+      name: #####
+      target:
+        type: #####
+        averageUtilization: #####

@@ -1,0 +1,23 @@
+apiVersion: secrets-store.csi.x-k8s.io/v1
+kind: SecretProviderClass
+metadata:
+  name: wordpress-spc
+  namespace: apilon-namespace
+spec:
+  provider: azure
+  secretObjects:
+  - secretName: mysql-secret
+    type: Opaque
+    data:
+    - objectName: "mysql-password"
+      key: mysql-password
+  parameters:
+    keyvaultName: "test-kv-priv"
+    useVMManagedIdentity: "true"
+    userAssignedIdentityID: "0aecfb94-e272-4689-81b3-5c989bf0a74b"
+    objects: |
+      array:
+        - |
+          objectName: mysql-password
+          objectType: secret
+    tenantID: "a3b0bed3-ccdc-430c-b728-97b1b6d653de"
